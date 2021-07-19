@@ -1,6 +1,7 @@
 package com.sh.springjpa.repository;
 
 import com.sh.springjpa.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
