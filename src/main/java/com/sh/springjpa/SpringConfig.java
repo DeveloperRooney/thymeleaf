@@ -1,6 +1,7 @@
 package com.sh.springjpa;
 
 import com.sh.springjpa.repository.JDBCMemberRepository;
+import com.sh.springjpa.repository.JDBCTempleteMemberRepository;
 import com.sh.springjpa.repository.MemberRepository;
 import com.sh.springjpa.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,8 @@ public class SpringConfig {
 
     @Bean
     public MemberRepository memberRepository() {
-        return new JDBCMemberRepository(dataSource);
+
+//        return new JDBCMemberRepository(dataSource);
+        return new JDBCTempleteMemberRepository(dataSource);
     }
 }
