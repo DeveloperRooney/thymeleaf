@@ -43,9 +43,13 @@ public class JDBCMemberRepository implements MemberRepository{
             e.printStackTrace();
         }finally {
             try {
-                rs.close();
-                pstmt.close();
-                conn.close();
+                if (rs != null) {
+                    rs.close();
+                }else if (pstmt != null) {
+                    pstmt.close();
+                }else if (conn != null) {
+                    conn.close();
+                }
             }catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -83,9 +87,13 @@ public class JDBCMemberRepository implements MemberRepository{
             e.printStackTrace();
         }finally {
             try {
-                rs.close();
-                pstmt.close();
-                conn.close();
+                if (rs != null) {
+                    rs.close();
+                }else if (pstmt != null) {
+                    pstmt.close();
+                }else if (conn != null) {
+                    conn.close();
+                }
             }catch (SQLException e) {
                 e.printStackTrace();
             }
